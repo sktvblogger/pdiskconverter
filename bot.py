@@ -5,10 +5,10 @@ import requests
 from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
 
-API_ID = environ.get('API_ID')
-API_HASH = environ.get('API_HASH')
-BOT_TOKEN = environ.get('BOT_TOKEN')
-API_KEY = environ.get('API_KEY', '3494ad69b7c32aa52e71adf0da498357')
+API_ID = environ.get('API_ID', '4546803')
+API_HASH = environ.get('API_HASH', '08ad181fba3b05e1141db96175cab60e')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6027500067:AAG-veKTUgl3nSIT2rpiK_FMAWv_60vPDqg')
+API_KEY = environ.get('API_KEY', '99xz8zhn3shdv021ws')
 
 bot = Client('pdiskshortner bot',
              api_id=API_ID,
