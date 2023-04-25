@@ -47,14 +47,14 @@ async def link_handler(bot, message):
         await message.reply(f'Error: {e}', quote=True)
 
 
-async def post_shortlink(Link):
+async def post_shortlink(link):
     url = 'https://pdisk.pro/api/file/clone'
-    params = {'key': API_KEY, 'file_code': Link}
+    params = {'file_code': link, 'key': PDISK_KEY}
+
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params, raise_for_status=True) as response:
             data = await response.json()
-            print(data["result"].get("filecode"))
-            return data["result"].get("filecode")
+            return data['result']['filecode']
  
 
 bot.run()
